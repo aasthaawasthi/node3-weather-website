@@ -27,7 +27,7 @@ weatherForm.addEventListener('submit', (e) => {
     mesaageOne.textContent = 'Loading...';
     mesaageTwo.textContent = '';
 
-    fetch('http://localhost:4000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (!data) {
                 mesaageOne.textContent = "nitin gadha hai";
